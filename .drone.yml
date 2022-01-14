@@ -29,6 +29,9 @@ steps:
 
 - name: publish-tagged-image
   image: plugins/docker
+  volumes:
+    - name: socket
+      path: /var/run/docker.sock
   settings:
     build_args:
     - ARCH=s390x
