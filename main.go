@@ -28,7 +28,6 @@ var (
 func main() {
 	defer cleanup()
 	reexec.Register("ssync", ssync.Main)
-	fmt.Println("upgrade test")
 
 	if !reexec.Init() {
 		longhornCli()
